@@ -1,116 +1,185 @@
 import Image from "next/image";
 
+const highlights = [
+	"Bank-connected purchase matching",
+	"Receipt delivery straight to inboxes",
+	"POS software designed for modern merchants",
+];
+
+const pillars = [
+	{
+		title: "Automatic receipt routing",
+		description:
+			"Trexip links payment activity with customer identity so receipts reach the right inbox without asking the cashier to slow down.",
+	},
+	{
+		title: "Built for cash registers",
+		description:
+			"The platform is aimed at point-of-sale software: faster checkout flows, cleaner records, and a customer experience that feels current.",
+	},
+	{
+		title: "Stripe-level ambition",
+		description:
+			"The goal is not another add-on. Trexip is being shaped as core infrastructure for payment-aware retail systems.",
+	},
+];
+
+const steps = [
+	"A customer pays using a connected bank account or recognized payment method.",
+	"Trexip matches the transaction with the customer profile and transaction context.",
+	"A clean digital receipt is generated and sent automatically by email.",
+];
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className="min-h-screen overflow-hidden bg-[var(--canvas)] text-[var(--ink)]">
+			<section className="relative isolate">
+				<div className="absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,181,71,0.32),_transparent_36%),radial-gradient(circle_at_top_right,_rgba(220,38,38,0.18),_transparent_28%),linear-gradient(180deg,_#fff8eb_0%,_#f6efe2_58%,_#efe4d4_100%)]" />
+				<div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 pb-16 pt-8 sm:px-10 lg:px-16">
+					<header className="flex items-center justify-between">
+						<div className="flex items-center gap-4">
+							<Image
+								src="/LeLogo.svg"
+								alt="Trexip logo"
+								width={56}
+								height={56}
+								priority
+								className="h-14 w-14 shrink-0 object-contain"
+							/>
+							<div>
+								<p className="font-[family:var(--font-display)] text-2xl tracking-[0.2em] text-[var(--accent-strong)]">
+									TREXIP
+								</p>
+								<p className="text-sm uppercase tracking-[0.24em] text-[var(--muted)]">
+									Payment-aware receipt infrastructure
+								</p>
+							</div>
+						</div>
+						<a
+							href="https://trainvent.com"
+							target="_blank"
+							rel="noreferrer"
+							className="rounded-full border border-[var(--line)] bg-white/70 px-5 py-2 text-sm font-semibold text-[var(--ink)] backdrop-blur transition hover:border-[var(--accent)] hover:bg-white"
+						>
+							Visit trainvent.com
+						</a>
+					</header>
 
-      <div className="relative z-[-1] flex flex-col gap-3 place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div>
-          on GitLab Pages
-        </div>
-      </div>
+					<div className="grid flex-1 gap-14 pb-10 pt-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(22rem,0.8fr)] lg:items-center lg:gap-10 lg:pt-20">
+						<div className="max-w-3xl">
+							<p className="inline-flex rounded-full border border-[var(--line)] bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)] shadow-[0_12px_30px_rgba(120,53,15,0.08)] backdrop-blur">
+								Coming soon for retail and hospitality
+							</p>
+							<h1 className="mt-8 max-w-4xl font-[family:var(--font-display)] text-5xl leading-[0.94] tracking-[-0.04em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
+								Trexip turns payments into instant email receipts.
+							</h1>
+							<p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted-strong)] sm:text-xl">
+								We are building software for cash registers that connects payment
+								data with customer identity, so businesses can send receipts
+								automatically without breaking checkout flow.
+							</p>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+							<div className="mt-10 flex flex-wrap gap-3">
+								{highlights.map((highlight) => (
+									<span
+										key={highlight}
+										className="rounded-full border border-[var(--line)] bg-[rgba(255,255,255,0.86)] px-4 py-2 text-sm text-[var(--muted-strong)] shadow-[0_10px_24px_rgba(120,53,15,0.06)]"
+									>
+										{highlight}
+									</span>
+								))}
+							</div>
+						</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+						<div className="relative">
+							<div className="absolute left-10 top-8 -z-10 h-48 w-48 rounded-full bg-[rgba(180,83,9,0.16)] blur-3xl" />
+							<div className="absolute bottom-12 right-2 -z-10 h-56 w-56 rounded-full bg-[rgba(190,24,93,0.14)] blur-3xl" />
+							<div className="rounded-[2rem] border border-[rgba(120,53,15,0.14)] bg-[rgba(109,40,14,0.96)] p-6 text-[var(--card-ink)] shadow-[0_28px_80px_rgba(68,35,15,0.28)]">
+								<div className="flex items-center justify-between border-b border-white/10 pb-4">
+									<div>
+										<p className="text-sm uppercase tracking-[0.22em] text-white/60">
+											Product signal
+										</p>
+										<p className="mt-2 font-[family:var(--font-display)] text-3xl">
+											The smarter receipt layer
+										</p>
+									</div>
+									<div className="rounded-full bg-[rgba(255,237,213,0.14)] px-3 py-1 text-xs uppercase tracking-[0.18em] text-[var(--card-accent)]">
+										Beta
+									</div>
+								</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+								<div className="mt-6 space-y-4">
+									{steps.map((step, index) => (
+										<div
+											key={step}
+											className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4"
+										>
+											<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[rgba(255,237,213,0.12)] font-semibold text-[var(--card-accent)]">
+												0{index + 1}
+											</div>
+											<p className="text-sm leading-7 text-white/80">{step}</p>
+										</div>
+									))}
+								</div>
 
-        <a
-          href="https://docs.gitlab.com/ee/user/project/pages/"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Learn more about deploying your site with GitLab Pages.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+								<div className="mt-6 grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 sm:grid-cols-2">
+									<div>
+										<p className="text-xs uppercase tracking-[0.16em] text-white/50">
+											Built for
+										</p>
+										<p className="mt-2 text-lg text-white/90">
+											Retailers, restaurants, and modern POS teams
+										</p>
+									</div>
+									<div>
+										<p className="text-xs uppercase tracking-[0.16em] text-white/50">
+											Outcome
+										</p>
+										<p className="mt-2 text-lg text-white/90">
+											Faster checkouts and cleaner post-purchase communication
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="relative border-t border-[rgba(120,53,15,0.12)] bg-[linear-gradient(180deg,_rgba(255,248,235,0.2)_0%,_rgba(255,255,255,0.72)_100%)] px-6 py-20 sm:px-10 lg:px-16">
+				<div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+					<div>
+						<p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
+							Why Trexip
+						</p>
+						<h2 className="mt-4 max-w-xl font-[family:var(--font-display)] text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">
+							A new layer between checkout, banking, and customer messaging.
+						</h2>
+						<p className="mt-5 max-w-xl text-base leading-8 text-[var(--muted-strong)]">
+							Legacy receipt flows depend on paper, manual email entry, or weak
+							CRM links. Trexip is being designed as a cleaner system: payment
+							event in, trusted receipt email out.
+						</p>
+					</div>
+
+					<div className="grid gap-5 md:grid-cols-3">
+						{pillars.map((pillar) => (
+							<article
+								key={pillar.title}
+								className="rounded-[1.75rem] border border-[var(--line)] bg-white/80 p-6 shadow-[0_18px_48px_rgba(120,53,15,0.08)] backdrop-blur"
+							>
+								<p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent-strong)]">
+									{pillar.title}
+								</p>
+								<p className="mt-4 text-base leading-7 text-[var(--muted-strong)]">
+									{pillar.description}
+								</p>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+		</main>
+	);
 }
