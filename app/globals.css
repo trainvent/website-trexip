@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #f3e6d2;
-  --surface: #fffaf1;
-  --ink: #28150c;
-  --muted: #855a43;
-  --muted-strong: #6e4a38;
-  --line: rgba(120, 53, 15, 0.16);
-  --accent: #dc5f31;
-  --accent-strong: #ac3f18;
-  --card-ink: #fff7f0;
-  --card-accent: #ffd9b5;
+  --canvas: #eef0ea;
+  --surface: #fbfaf6;
+  --ink: #17211f;
+  --muted: #586763;
+  --muted-strong: #3d4e49;
+  --line: rgba(23, 33, 31, 0.12);
+  --accent: #c96c3c;
+  --accent-strong: #9c4b23;
+  --card-ink: #f2f4ef;
+  --card-accent: #e5bd8d;
   --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
 }
@@ -29,7 +29,9 @@ body {
   margin: 0;
   min-width: 320px;
   color: var(--ink);
-  background: var(--canvas);
+  background:
+    radial-gradient(circle at top, rgba(201, 108, 60, 0.08), transparent 30%),
+    linear-gradient(180deg, #f3f2ed 0%, var(--canvas) 100%);
   font-family: var(--font-body), sans-serif;
 }
 

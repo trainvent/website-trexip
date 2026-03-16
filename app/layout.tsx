@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Trexip | Automated Receipt Delivery for Modern Cash Registers",
+  title: "Trexip | Receipt Infrastructure for Bank-Connected Commerce",
   description:
-    "Trexip is building POS software that connects payments, customer identity, and email delivery to send receipts automatically.",
+    "Trexip presents a consent-based digital receipt network that connects merchants, open banking, and customer email delivery.",
   icons: {
     icon: "/LeLogo.svg",
     shortcut: "/LeLogo.svg",
