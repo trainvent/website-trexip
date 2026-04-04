@@ -37,6 +37,33 @@ const collaboration = [
 	"Open-banking, fintech, or accounting startups looking for a product partner on receipt infrastructure",
 ];
 
+const showcaseSteps = [
+	{
+		eyebrow: "01 Register",
+		title: "Start with email and IBAN-based onboarding.",
+		description:
+			"The early concept assumes a lightweight sign-up that verifies identity and links a payment account with explicit user permission.",
+	},
+	{
+		eyebrow: "02 Pay in store",
+		title: "Use any Trexip-compatible terminal at checkout.",
+		description:
+			"The merchant does not need to ask for an email address again. Trexip listens for the payment event and prepares the receipt handoff in the background.",
+	},
+	{
+		eyebrow: "03 Receive and analyze",
+		title: "Get the receipt in-app, optionally by email, and build personal spending stats.",
+		description:
+			"The product becomes more than receipt storage once transactions can be categorized, searched, and summarized over time.",
+	},
+	{
+		eyebrow: "04 Export",
+		title: "Move data into TSV or combine it with other finance sources.",
+		description:
+			"That opens the door to bookkeeping workflows, budgeting tools, and richer cross-source purchase reporting.",
+	},
+];
+
 export default function Home() {
 	return (
 		<main className="min-h-screen overflow-hidden bg-[var(--canvas)] text-[var(--ink)]">
@@ -70,19 +97,55 @@ export default function Home() {
 
 					<div className="grid flex-1 gap-12 pt-16 lg:grid-cols-[minmax(0,1.1fr)_26rem] lg:items-start lg:pt-24">
 						<div className="max-w-4xl">
-							<p className="inline-flex rounded-full border border-[var(--line)] bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-strong)] shadow-[0_12px_30px_rgba(32,39,37,0.08)] backdrop-blur">
-								From rough concept to serious fintech product
-							</p>
 							<h1 className="mt-8 font-[family:var(--font-display)] text-5xl leading-[0.92] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
 								Trexip wants to make receipts arrive automatically after a bank payment.
 							</h1>
-							<p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted-strong)] sm:text-xl">
-								The original thought was simple: bind a bank account to an email
-								address and send the receipt automatically. The stronger version is
-								more realistic and more defensible: Trexip as a consent-based
-								receipt infrastructure layer connecting users, merchants, and
-								open-banking rails.
-							</p>
+
+							<div className="mt-10 overflow-hidden rounded-[2.25rem] border border-[rgba(20,58,56,0.12)] bg-white/88 p-4 shadow-[0_28px_70px_rgba(36,42,39,0.12)] sm:p-6">
+								<div className="relative overflow-hidden rounded-[1.6rem] border border-[var(--line)] bg-[linear-gradient(145deg,_rgba(250,247,241,0.96)_0%,_rgba(240,245,241,0.92)_100%)] p-3 sm:p-4">
+									<div className="absolute left-10 top-8 h-28 w-28 rounded-full bg-[rgba(201,108,60,0.12)] blur-3xl" />
+									<div className="absolute bottom-10 right-8 h-36 w-36 rounded-full bg-[rgba(42,111,105,0.14)] blur-3xl" />
+									<Image
+										src="/Trexip Showcase.png"
+										alt="Trexip concept showcase illustrating registration, payment, receipt delivery, analytics, and export."
+										width={1024}
+										height={500}
+										className="relative z-10 h-auto w-full rounded-[1.1rem] border border-black/5"
+									/>
+								</div>
+							</div>
+
+							<div className="mt-8 flex flex-col gap-4 rounded-[1.75rem] border border-[rgba(20,58,56,0.14)] bg-white/72 p-5 shadow-[0_18px_48px_rgba(36,42,39,0.08)] backdrop-blur sm:p-6">
+								<div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+									<div className="max-w-3xl">
+										<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
+											Not yet prototyped
+										</p>
+										<p className="mt-2 text-sm leading-7 text-[var(--muted-strong)] sm:text-base">
+											This page presents the product direction and collaboration thesis.
+											Trexip is not yet a shipped prototype, and the team is looking for
+											partners to help shape the first working version.
+										</p>
+									</div>
+
+									<div className="flex flex-wrap gap-3">
+										<a
+											href="mailto:info@trexip.com"
+											className="rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
+										>
+											info@trexip.com
+										</a>
+										<a
+											href="https://www.trainvent.com"
+											target="_blank"
+											rel="noreferrer"
+											className="rounded-full border border-[var(--line)] bg-white/90 px-5 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-[var(--accent)] hover:bg-white"
+										>
+											Trainvent company site
+										</a>
+									</div>
+								</div>
+							</div>
 
 							<div className="mt-10 grid gap-3 sm:grid-cols-3">
 								{opportunity.map((item) => (
@@ -168,6 +231,49 @@ export default function Home() {
 				</div>
 			</section>
 
+			<section className="border-y border-[var(--line)] bg-[linear-gradient(180deg,_rgba(255,250,244,0.92)_0%,_rgba(243,246,241,0.92)_100%)] px-6 py-20 sm:px-10 lg:px-16">
+				<div className="mx-auto max-w-7xl">
+					<div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+						<div>
+							<p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
+								Idea showcase
+							</p>
+							<h2 className="mt-4 max-w-xl font-[family:var(--font-display)] text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
+								A first product story that turns a payment into a useful receipt workflow.
+							</h2>
+							<p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted-strong)]">
+								This concept sketch makes the Trexip promise much easier to grasp:
+								register once, pay normally, receive receipts automatically, then
+								export or analyze the resulting data. It is not the final UX, but
+								it shows a credible end-to-end value chain.
+							</p>
+						</div>
+
+						<div className="rounded-[2rem] border border-[var(--line)] bg-white/80 p-6 shadow-[0_24px_60px_rgba(36,42,39,0.08)]">
+							<div className="grid gap-4 sm:grid-cols-2">
+								{showcaseSteps.map((step) => (
+									<article
+										key={step.eyebrow}
+										className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--surface)]/90 p-5"
+									>
+										<p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-strong)]">
+											{step.eyebrow}
+										</p>
+										<h3 className="mt-3 text-lg font-semibold leading-7 text-[var(--ink)]">
+											{step.title}
+										</h3>
+										<p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">
+											{step.description}
+										</p>
+									</article>
+								))}
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
 			<section className="border-y border-[var(--line)] bg-[linear-gradient(180deg,_rgba(255,255,255,0.5)_0%,_rgba(231,239,236,0.8)_100%)] px-6 py-20 sm:px-10 lg:px-16">
 				<div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr]">
 					<div className="rounded-[2rem] border border-[var(--line)] bg-white/72 p-8 shadow-[0_24px_60px_rgba(36,42,39,0.08)]">
@@ -238,13 +344,13 @@ export default function Home() {
 							</p>
 							<div className="mt-6 flex flex-wrap gap-4">
 								<a
-									href="mailto:hello@trexip.com"
+									href="mailto:info@trexip.com"
 									className="rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--accent-strong)]"
 								>
-									hello@trexip.com
+									info@trexip.com
 								</a>
 								<a
-									href="https://trainvent.com"
+									href="https://www.trainvent.com"
 									target="_blank"
 									rel="noreferrer"
 									className="rounded-full border border-[var(--line)] bg-white/80 px-5 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-[var(--accent)] hover:bg-white"
