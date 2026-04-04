@@ -5,10 +5,6 @@ export const metadata: Metadata = {
   title: "Trexip | Receipt Infrastructure for Bank-Connected Commerce",
   description:
     "Trexip presents a consent-based digital receipt network that connects merchants, open banking, and customer email delivery.",
-  icons: {
-    icon: "/LeLogo.svg",
-    shortcut: "/LeLogo.svg",
-  },
 };
 
 export default function RootLayout({
