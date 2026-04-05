@@ -1,3 +1,5 @@
+const basePath = process.env.PAGES_BASE_PATH || "";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -5,8 +7,9 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Specify the path if your app is not deployed at the root of your domain.
-  // basePath: '/',
+  // Leave this empty for root-domain deployments, including custom domains.
+  // Set PAGES_BASE_PATH only when the site is intentionally published under a subpath.
+  ...(basePath ? { basePath } : {}),
 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
@@ -14,8 +17,7 @@ const nextConfig = {
   // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
   // skipTrailingSlashRedirect: true,
 
-  // Optional: Change the output directory `out` -> `dist`. Remember to update
-  // it in .gitlab-ci.yml as well.
+  // Optional: Change the output directory `out` -> `dist`.
   // distDir: 'dist',
 };
 

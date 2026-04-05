@@ -20,4 +20,8 @@ Trexip is a small Next.js landing page that presents a consent-based digital rec
 
 ## Deployment note
 
-If you deploy the site under a subpath instead of the domain root, set `basePath` in [next.config.mjs](/home/leonmarq/Code/website-trexip/next.config.mjs). If the site is deployed at the root, you can leave it unset.
+The repo includes a GitHub Pages workflow at [.github/workflows/deploy-pages.yml](/home/leonmarq/Code/website-trexip/.github/workflows/deploy-pages.yml) that builds the static export from the `master` branch and deploys the contents of `out/`.
+
+By default the site is built for the domain root, so exported assets resolve from paths like `/_next/...`. That is the correct setup for a root deployment, including a custom domain.
+
+If you intentionally publish the site under a subpath, set `PAGES_BASE_PATH` when building so [next.config.mjs](/home/leonmarq/Code/website-trexip/next.config.mjs) can apply that base path. Leave `PAGES_BASE_PATH` unset for root-domain deployments.
