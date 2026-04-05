@@ -22,6 +22,8 @@ Trexip is a small Next.js landing page that presents a consent-based digital rec
 
 The repo includes a GitHub Pages workflow at [.github/workflows/deploy-pages.yml](/home/leonmarq/Code/website-trexip/.github/workflows/deploy-pages.yml) that builds the static export from the `master` branch and deploys the contents of `out/`.
 
-By default the site is built for the domain root, so exported assets resolve from paths like `/_next/...`. That is the correct setup for a root deployment, including a custom domain.
+The GitHub Pages workflow reads the deployment base path from `actions/configure-pages` and passes it to the build as `PAGES_BASE_PATH`. That lets the same repo build correctly for either a repository Pages URL such as `/website-trexip` or a root-domain/custom-domain deployment.
 
-If you intentionally publish the site under a subpath, set `PAGES_BASE_PATH` when building so [next.config.mjs](/home/leonmarq/Code/website-trexip/next.config.mjs) can apply that base path. Leave `PAGES_BASE_PATH` unset for root-domain deployments.
+For root-domain deployments, including custom domains, leave `PAGES_BASE_PATH` empty so exported assets resolve from paths like `/_next/...`.
+
+If you intentionally publish the site under a subpath outside GitHub Actions, set `PAGES_BASE_PATH` when building so [next.config.mjs](/home/leonmarq/Code/website-trexip/next.config.mjs) can apply that base path.

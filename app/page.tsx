@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+const assetBase = process.env.PAGES_BASE_PATH || "";
+const assetPath = (path: string) => `${assetBase}${path}`;
+
 const pillars = [
   {
     title: "One-time consent",
@@ -86,7 +89,7 @@ export default function Home() {
           <header className="flex flex-wrap items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <Image
-                src="/Logo_Trexip.png"
+                src={assetPath("/Logo_Trexip.png")}
                 alt="Trexip logo"
                 width={56}
                 height={56}
@@ -118,7 +121,7 @@ export default function Home() {
               </h1>
 
               <div className="mt-10 overflow-hidden rounded-[2.25rem] border border-[rgba(20,58,56,0.12)] bg-white/88 p-4 shadow-[0_28px_70px_rgba(36,42,39,0.12)] sm:p-6">                  <Image
-                    src="/Trexip Showcase.png"
+                    src={assetPath("/Trexip Showcase.png")}
                     alt="Trexip concept infographic showing onboarding, payment, receipt delivery, analysis, and export."
                     width={1024}
                     height={500}
